@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[hexo踩坑记录]]></title>
+    <url>%2Fhexo%2F2018%2F12%2F21%2Fhexo%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[开发文档Hexo中文文档 环境搭建 全局安装Hexo-cli 1npm install -g hexo-cli 使用 Hexo-cli 创建Hexo项目 123hexo init &lt;folder&gt;cd &lt;folder&gt;npm install 配置站点项目根目录下找到 _config.yml 文件, 按照文档给的说明修改 写作 新增文章1hexo new [layout] &lt;title&gt; 如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。新增的文章, 可以在 source_posts\ 文件夹里找到。打开文章md, 文件最上边的两个 --- 放置的是文章的一些信息, 写正文的话另起一行即可 生成1hexo generate 预览开启本地服务1hexo server 发布 使用 git 部署的话, 首先要安装 hexo-deployer-git 1npm install hexo-deployer-git --save 安装完毕, 修改配置 12345deploy: type: git repo: &lt;repository url&gt; branch: [branch] message: [message] 如果习惯于git的话, message可以不用写, 每次提交部署的时候写上 提交部署12// 这里的写法与 git commit 一致, 也可以到_config.yml中去配hexo deploy -m message 个性配置Hexo默认的主题, 会在首页显示文章的全文, 这个问题可以使用 站点首页不显示文章全文 这篇博文提到的办法解决]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[git生成SSHkey]]></title>
+    <url>%2Fhexo%2F2018%2F12%2F21%2Fgit%E7%94%9F%E6%88%90SSHkey%2F</url>
+    <content type="text"><![CDATA[1. 配置全局 name 和 email12git config --global user.name &quot;your_account&quot;git config –-global user.email your_email@example.com 2. 生成 SSH Key将以下命令中的邮箱改为自己的邮箱后, 执行命令, 然后连续按回车键三次1ssh-keygen -t rsa -C your_email@example.com 3. 查看生成的 SSH Key1cat ~/.ssh/id_rsa.pub 4. 添加 SSH Key 到 github 配置使用第3步的命令, 或者打开 C:\Users\Administrator\.ssh\id_rsa.pub 文件来获取 SSH Key,然后打开 添加 SSH Key 页面, 自定义一个 title, 并将 SSH Key 粘贴到 Key 输入框, 最后点击 Add 5. 测试 SSH Key1ssh git@github.com]]></content>
+  </entry>
+</search>

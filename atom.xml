@@ -1,39 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>云端笔记</title>
   
-  
+  <subtitle>杂七杂八的前端之旅</subtitle>
   <link href="/hexo/atom.xml" rel="self"/>
   
   <link href="http://kscript.gitee.io/"/>
-  <updated>2018-12-21T06:45:08.329Z</updated>
+  <updated>2018-12-21T07:22:23.638Z</updated>
   <id>http://kscript.gitee.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>路人</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>git生成SSHkey</title>
-    <link href="http://kscript.gitee.io/2018/12/21/git%E7%94%9F%E6%88%90SSHkey/"/>
-    <id>http://kscript.gitee.io/2018/12/21/git生成SSHkey/</id>
-    <published>2018-12-21T06:21:03.000Z</published>
-    <updated>2018-12-21T06:45:08.329Z</updated>
+    <title>hexo踩坑记录</title>
+    <link href="http://kscript.gitee.io/2018/12/21/hexo%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/"/>
+    <id>http://kscript.gitee.io/2018/12/21/hexo踩坑记录/</id>
+    <published>2018-12-21T06:50:43.000Z</published>
+    <updated>2018-12-21T07:22:23.638Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a><ol><li><p>配置全局 name 和 email</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;your_account&quot;</span><br><span class="line">git config –-global user.email your_email@example.com</span><br></pre></td></tr></table></figure></li><li><p>生成 SSH Key<br>将以下命令中的邮箱改为自己的邮箱后, 执行命令, 然后连续按回车键三次</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C your_email@example.com</span><br></pre></td></tr></table></figure></li><li><p>查看生成的 SSH Key  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></li><li><p>添加 SSH Key 到 github 配置<br>使用第3步的命令, 或者打开 C:\Users\Administrator\.ssh\id_rsa.pub 文件来获取 SSH Key,<br>然后打开 <a href="https://github.com/settings/ssh/new" target="_blank" rel="noopener">添加 SSH Key</a> 页面, 自定义一个 title, 并将 SSH Key 粘贴到 Key 输入框, 最后点击 Add</p></li><li><p>测试 SSH Key</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    <content type="html"><![CDATA[<h4 id="开发文档"><a href="#开发文档" class="headerlink" title="开发文档"></a>开发文档</h4><p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo中文文档</a></p><a id="more"></a><h4 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h4><ol><li><p>全局安装Hexo-cli</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></li><li><p>使用 Hexo-cli 创建Hexo项目</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line"><span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure></li><li><p>配置站点<br>项目根目录下找到 _config.yml 文件, 按照文档给的说明修改</p></li></ol><h4 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h4><ol><li>新增文章<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;<span class="built_in">title</span>&gt;</span><br></pre></td></tr></table></figure></li></ol><p>如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。<br>如果标题包含空格的话，请使用引号括起来。<br>新增的文章, 可以在 source_posts\ 文件夹里找到。打开文章md, 文件最上边的两个 <code>---</code> 放置的是文章的一些信息, 写正文的话另起一行即可</p><ol start="2"><li>生成<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure></li></ol><h4 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h4><p>开启本地服务<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></p><h4 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h4><ol><li><p>使用 git 部署的话, 首先要安装 hexo-deployer-git</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li><li><p>安装完毕, 修改配置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: &lt;repository url&gt;</span><br><span class="line">  branch: [branch]</span><br><span class="line">  message: [message]</span><br></pre></td></tr></table></figure></li></ol><p>如果习惯于git的话, message可以不用写, 每次提交部署的时候写上</p><ol start="3"><li>提交部署<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 这里的写法与 git commit 一致, 也可以到_config.yml中去配</span><br><span class="line">hexo deploy -m message</span><br></pre></td></tr></table></figure></li></ol><h4 id="个性配置"><a href="#个性配置" class="headerlink" title="个性配置"></a>个性配置</h4><p>Hexo默认的主题, 会在首页显示文章的全文, 这个问题可以使用 <a href="https://blog.csdn.net/lewky_liu/article/details/81277337" target="_blank" rel="noopener">站点首页不显示文章全文</a> 这篇博文提到的办法解决</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;配置全局 name 和 email&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;
-      
+      &lt;h4 id=&quot;开发文档&quot;&gt;&lt;a href=&quot;#开发文档&quot; class=&quot;headerlink&quot; title=&quot;开发文档&quot;&gt;&lt;/a&gt;开发文档&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://hexo.io/zh-cn/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo中文文档&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
@@ -41,21 +35,17 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://kscript.gitee.io/2018/12/18/hello-world/"/>
-    <id>http://kscript.gitee.io/2018/12/18/hello-world/</id>
-    <published>2018-12-18T11:09:14.215Z</published>
-    <updated>2018-12-21T06:45:06.933Z</updated>
+    <title>git生成SSHkey</title>
+    <link href="http://kscript.gitee.io/2018/12/21/git%E7%94%9F%E6%88%90SSHkey/"/>
+    <id>http://kscript.gitee.io/2018/12/21/git生成SSHkey/</id>
+    <published>2018-12-21T06:21:03.000Z</published>
+    <updated>2018-12-21T08:58:08.168Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h4 id="1-配置全局-name-和-email"><a href="#1-配置全局-name-和-email" class="headerlink" title="1. 配置全局 name 和 email"></a>1. 配置全局 name 和 email</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;your_account&quot;</span><br><span class="line">git config –-global user.email your_email@example.com</span><br></pre></td></tr></table></figure><a id="more"></a><h4 id="2-生成-SSH-Key"><a href="#2-生成-SSH-Key" class="headerlink" title="2. 生成 SSH Key"></a>2. 生成 SSH Key</h4><p>将以下命令中的邮箱改为自己的邮箱后, 执行命令, 然后连续按回车键三次<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C your_email@example.com</span><br></pre></td></tr></table></figure></p><h4 id="3-查看生成的-SSH-Key"><a href="#3-查看生成的-SSH-Key" class="headerlink" title="3. 查看生成的 SSH Key"></a>3. 查看生成的 SSH Key</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure><h4 id="4-添加-SSH-Key-到-github-配置"><a href="#4-添加-SSH-Key-到-github-配置" class="headerlink" title="4. 添加 SSH Key 到 github 配置"></a>4. 添加 SSH Key 到 github 配置</h4><p>使用第3步的命令, 或者打开 C:\Users\Administrator\.ssh\id_rsa.pub 文件来获取 SSH Key,<br>然后打开 <a href="https://github.com/settings/ssh/new" target="_blank" rel="noopener">添加 SSH Key</a> 页面, 自定义一个 title, 并将 SSH Key 粘贴到 Key 输入框, 最后点击 Add</p><h4 id="5-测试-SSH-Key"><a href="#5-测试-SSH-Key" class="headerlink" title="5. 测试 SSH Key"></a>5. 测试 SSH Key</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a h
-      
+      &lt;h4 id=&quot;1-配置全局-name-和-email&quot;&gt;&lt;a href=&quot;#1-配置全局-name-和-email&quot; class=&quot;headerlink&quot; title=&quot;1. 配置全局 name 和 email&quot;&gt;&lt;/a&gt;1. 配置全局 name 和 email&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git config --global user.name &amp;quot;your_account&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git config –-global user.email your_email@example.com&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
