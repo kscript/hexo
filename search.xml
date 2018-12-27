@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[前端资源导航]]></title>
+    <url>%2Fhexo%2F2018%2F12%2F27%2F%E5%89%8D%E7%AB%AF%E8%B5%84%E6%BA%90%E5%AF%BC%E8%88%AA%2F</url>
+    <content type="text"><![CDATA[整理了一些前端相关的资源, 包括前端框架、打包工具、技术手册、技术博客、问答社区、在线调试等 VueVue: en | zhVue CLI 3Vue技术内幕Element-ui ReactReact: en | zhreact-native: en | zhdiscussreact中文 包管理器npmcnpmyarn 打包工具Webpack: en | zhGlup: en | zhRequireJS: en | zh 问答社区stackoverflow思否知乎 版本控制githubgitlab码云 技术社区/博客掘金CSDN简书博客园开源中国前端乱炖WEB前端开发V2EXdiv.ioITPUB 张鑫旭阮一峰W3CPlus 技术手册W3C: en | zhMDN: en | zhNodeJS: en | zhw3schools: en | zhTypeScript: en | zhRedux: en | zh菜鸟教程腾讯云 - 开发者手册前端开发者手册 在线代码测试JsbinCodepenJsfiddleCodesandbox 注释工具jsdoc: en | zh 其它Hexo博客生成阿里字体图标百度字体编辑器]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>js</tag>
+        <tag>导航</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[使用verdaccio搭建本地npm仓库]]></title>
     <url>%2Fhexo%2F2018%2F12%2F26%2F%E4%BD%BF%E7%94%A8verdaccio%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0npm%E4%BB%93%E5%BA%93%2F</url>
     <content type="text"><![CDATA[前言在前端日益工程化的今天, 我们几乎每天都在和node, npm, webpack这些工具打交道.它们极大地提升了我们的开发效率, 却也带来了不少的问题.比如webpack的难配置, npm包的依赖地狱, 动不动就需要安装一堆依赖等…今天记录一下 使用verdaccio搭建本地npm仓库 的办法, 解决npm依赖过重的问题.关于webpack的配置, 如果有闲暇时间的话, 我准备再写一篇[从零配置一个webpack项目]的文章. 使用本地仓库的优势 减少重复安装 可以发布一些私有包 环境搭建 全局安装 verdaccio1npm install --global verdaccio 使用说明 运行 verdaccio 1verdaccio 修改配置在运行 verdaccio 命令时的输出信息里, 找到 config.yaml文件 123456// 本地仓库没有指定包时的上游仓库uplinks: npmjs: url: https://registry.npm.taobao.org/ // 文末添加监听端口listen: 0.0.0.0:4873 设置仓库地址 1npm set registry http://localhost:4873/ 添加账户 1npm adduser admin --registry http://localhost:4873 发布私有包 1npm publish --registry http://localhost:4873 守护进程 试过一些教程中说的pm2, 可惜在windows系统中不太好用, 只好退而求次使用 开机启动 + vbs脚本打开一个隐藏的命令行 这种方法. 代码如下, 将其放入Startup文件夹即可.注意: 文件的名字不要是verdaccio.vbs, 会覆盖verdaccio命令 123// verda.vbsSet ws = CreateObject("Wscript.Shell") ws.run "cmd /c verdaccio",vbhide 嗯 .. 对于不会vbs的我来说, 这个进程很安全很安全.话说, 这个进程除了删文件关电脑外, 还有什么办法可以很方便地关掉~]]></content>
+      <tags>
+        <tag>npm</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[模拟new一个实例]]></title>
     <url>%2Fhexo%2F2018%2F12%2F26%2F%E6%A8%A1%E6%8B%9Fnew%E4%B8%80%E4%B8%AA%E5%AE%9E%E4%BE%8B%2F</url>
     <content type="text"><![CDATA[实现方法1234567891011function newInstace (func) &#123; if (func instanceof Function) &#123; // 基于函数原型创建一个对象 var instace = Object.create(func.prototype); // 修改函数的指向并调用 var result = func.apply(instace, [].slice.call(arguments, 1)); // 如果返回值是对象, 则返回这个对象, 否则返回前面创建的实例 return result instanceof Object ? result : instace; &#125; throw '第一个参数不是函数~';&#125; 调用方法1234567891011function Person(name)&#123; this.name = name;&#125;function Cat(name)&#123; this.name = name; return &#123; name: 'c' &#125;&#125;console.log(newInstace(Person, 'a')); // Person&#123; name: "a" &#125;console.log(newInstace(Cat, 'b')); // &#123; name: "c" &#125;]]></content>
       <tags>
-        <tag>js</tag>
         <tag>前端</tag>
+        <tag>js</tag>
       </tags>
   </entry>
   <entry>

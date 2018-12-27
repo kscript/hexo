@@ -6,7 +6,7 @@
   <link href="/hexo/atom.xml" rel="self"/>
   
   <link href="http://kscript.gitee.io/"/>
-  <updated>2018-12-26T10:24:09.659Z</updated>
+  <updated>2018-12-27T02:54:29.701Z</updated>
   <id>http://kscript.gitee.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>前端资源导航</title>
+    <link href="http://kscript.gitee.io/2018/12/27/%E5%89%8D%E7%AB%AF%E8%B5%84%E6%BA%90%E5%AF%BC%E8%88%AA/"/>
+    <id>http://kscript.gitee.io/2018/12/27/前端资源导航/</id>
+    <published>2018-12-27T01:05:31.000Z</published>
+    <updated>2018-12-27T02:54:29.701Z</updated>
+    
+    <content type="html"><![CDATA[<p>整理了一些前端相关的资源, 包括前端框架、打包工具、技术手册、技术博客、问答社区、在线调试等<br><a id="more"></a></p><h5 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h5><p>Vue: <a href="https://cn.vuejs.org" target="_blank" rel="noopener">en</a> | <a href="https://cn.vuejs.org" target="_blank" rel="noopener">zh</a><br><a href="https://cli.vuejs.org/zh/" target="_blank" rel="noopener">Vue CLI 3</a><br><a href="http://hcysun.me/vue-design/art/" target="_blank" rel="noopener">Vue技术内幕</a><br><a href="http://element-cn.eleme.io/#/zh-CN/component" target="_blank" rel="noopener">Element-ui</a></p><h5 id="React"><a href="#React" class="headerlink" title="React"></a>React</h5><p>React: <a href="https://reactjs.org/" target="_blank" rel="noopener">en</a> | <a href="https://react.docschina.org/" target="_blank" rel="noopener">zh</a><br>react-native: <a href="https://facebook.github.io/react-native/" target="_blank" rel="noopener">en</a> | <a href="https://reactnative.cn/" target="_blank" rel="noopener">zh</a><br><a href="https://discuss.reactjs.org/" target="_blank" rel="noopener">discuss</a><br><a href="http://react-china.org/" target="_blank" rel="noopener">react中文</a>  </p><h5 id="包管理器"><a href="#包管理器" class="headerlink" title="包管理器"></a>包管理器</h5><p><a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a><br><a href="https://npm.taobao.org/" target="_blank" rel="noopener">cnpm</a><br><a href="https://www.yarnpkg.com/zh-Hans/" target="_blank" rel="noopener">yarn</a>  </p><h5 id="打包工具"><a href="#打包工具" class="headerlink" title="打包工具"></a>打包工具</h5><p>Webpack: <a href="https://webpack.js.org/" target="_blank" rel="noopener">en</a> | <a href="https://www.webpackjs.com/concepts/" target="_blank" rel="noopener">zh</a><br>Glup: <a href="https://gulpjs.com/" target="_blank" rel="noopener">en</a> | <a href="https://www.gulpjs.com.cn/" target="_blank" rel="noopener">zh</a><br>RequireJS: <a href="https://requirejs.org/" target="_blank" rel="noopener">en</a> | <a href="http://www.requirejs.cn" target="_blank" rel="noopener">zh</a></p><h5 id="问答社区"><a href="#问答社区" class="headerlink" title="问答社区"></a>问答社区</h5><p><a href="https://stackoverflow.com/" target="_blank" rel="noopener">stackoverflow</a><br><a href="https://segmentfault.com/" target="_blank" rel="noopener">思否</a><br><a href="https://www.zhihu.com" target="_blank" rel="noopener">知乎</a>  </p><h5 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h5><p><a href="https://github.com" target="_blank" rel="noopener">github</a><br><a href="https://gitlab.com" target="_blank" rel="noopener">gitlab</a><br><a href="https://gitee.com" target="_blank" rel="noopener">码云</a>  </p><h5 id="技术社区-博客"><a href="#技术社区-博客" class="headerlink" title="技术社区/博客"></a>技术社区/博客</h5><p><a href="https://juejin.im/timeline" target="_blank" rel="noopener">掘金</a><br><a href="https://www.csdn.net/" target="_blank" rel="noopener">CSDN</a><br><a href="https://jianshu.com/" target="_blank" rel="noopener">简书</a><br><a href="https://www.cnblogs.com/" target="_blank" rel="noopener">博客园</a><br><a href="https://www.oschina.net/" target="_blank" rel="noopener">开源中国</a><br><a href="http://www.html-js.com/" target="_blank" rel="noopener">前端乱炖</a><br><a href="https://www.css88.com/" target="_blank" rel="noopener">WEB前端开发</a><br><a href="https://www.v2ex.com/" target="_blank" rel="noopener">V2EX</a><br><a href="https://div.io/" target="_blank" rel="noopener">div.io</a><br><a href="http://www.itpub.net" target="_blank" rel="noopener">ITPUB</a>  </p><p><a href="https://www.zhangxinxu.com/" target="_blank" rel="noopener">张鑫旭</a><br><a href="http://www.ruanyifeng.com/blog/" target="_blank" rel="noopener">阮一峰</a><br><a href="https://www.w3cplus.com/" target="_blank" rel="noopener">W3CPlus</a>  </p><h5 id="技术手册"><a href="#技术手册" class="headerlink" title="技术手册"></a>技术手册</h5><p>W3C: <a href="https://www.w3.org/" target="_blank" rel="noopener">en</a> | <a href="http://www.chinaw3c.org/" target="_blank" rel="noopener">zh</a><br>MDN: <a href="https://developer.mozilla.org" target="_blank" rel="noopener">en</a> | <a href="https://developer.mozilla.org/zh-CN" target="_blank" rel="noopener">zh</a><br>NodeJS: <a href="https://nodejs.org/" target="_blank" rel="noopener">en</a> | <a href="http://nodejs.cn/" target="_blank" rel="noopener">zh</a><br>w3schools: <a href="http://www.w3schools.com" target="_blank" rel="noopener">en</a> | <a href="http://www.w3school.com.cn" target="_blank" rel="noopener">zh</a><br>TypeScript: <a href="http://www.typescriptlang.org/" target="_blank" rel="noopener">en</a> | <a href="https://www.tslang.cn/" target="_blank" rel="noopener">zh</a><br>Redux: <a href="https://redux.js.org/" target="_blank" rel="noopener">en</a> | <a href="https://www.redux.org.cn/" target="_blank" rel="noopener">zh</a><br><a href="http://www.runoob.com" target="_blank" rel="noopener">菜鸟教程</a><br><a href="https://cloud.tencent.com/developer/devdocs" target="_blank" rel="noopener">腾讯云 - 开发者手册</a><br><a href="https://dwqs.gitbooks.io/frontenddevhandbook" target="_blank" rel="noopener">前端开发者手册</a>  </p><h5 id="在线代码测试"><a href="#在线代码测试" class="headerlink" title="在线代码测试"></a>在线代码测试</h5><p><a href="https://jsbin.com/" target="_blank" rel="noopener">Jsbin</a><br><a href="https://codepen.io" target="_blank" rel="noopener">Codepen</a><br><a href="https://jsfiddle.net/" target="_blank" rel="noopener">Jsfiddle</a><br><a href="https://codesandbox.io" target="_blank" rel="noopener">Codesandbox</a>  </p><h5 id="注释工具"><a href="#注释工具" class="headerlink" title="注释工具"></a>注释工具</h5><p>jsdoc: <a href="http://usejsdoc.org/" target="_blank" rel="noopener">en</a> | <a href="https://www.css88.com/doc/jsdoc/" target="_blank" rel="noopener">zh</a></p><h5 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h5><p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo博客生成</a><br><a href="https://www.iconfont.cn/" target="_blank" rel="noopener">阿里字体图标</a><br><a href="http://fontstore.baidu.com/static/editor/index.html" target="_blank" rel="noopener">百度字体编辑器</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;整理了一些前端相关的资源, 包括前端框架、打包工具、技术手册、技术博客、问答社区、在线调试等&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://kscript.gitee.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="js" scheme="http://kscript.gitee.io/tags/js/"/>
+    
+      <category term="导航" scheme="http://kscript.gitee.io/tags/%E5%AF%BC%E8%88%AA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用verdaccio搭建本地npm仓库</title>
     <link href="http://kscript.gitee.io/2018/12/26/%E4%BD%BF%E7%94%A8verdaccio%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0npm%E4%BB%93%E5%BA%93/"/>
     <id>http://kscript.gitee.io/2018/12/26/使用verdaccio搭建本地npm仓库/</id>
     <published>2018-12-26T10:23:10.000Z</published>
-    <updated>2018-12-26T10:24:09.659Z</updated>
+    <updated>2018-12-27T03:58:08.290Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在前端日益工程化的今天, 我们几乎每天都在和node, npm, webpack这些工具打交道.<br>它们极大地提升了我们的开发效率, 却也带来了不少的问题.<br>比如webpack的难配置, npm包的依赖地狱, 动不动就需要安装一堆依赖等…<br>今天记录一下 使用verdaccio搭建本地npm仓库 的办法, 解决npm依赖过重的问题.<br>关于webpack的配置, 如果有闲暇时间的话, 我准备再写一篇[从零配置一个webpack项目]的文章.</p><a id="more"></a><hr><h3 id="使用本地仓库的优势"><a href="#使用本地仓库的优势" class="headerlink" title="使用本地仓库的优势"></a>使用本地仓库的优势</h3><ol><li>减少重复安装</li><li>可以发布一些私有包</li></ol><h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><ol><li>全局安装 verdaccio<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --global verdaccio</span><br></pre></td></tr></table></figure></li></ol><h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><ol><li><p>运行 verdaccio</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">verdaccio</span><br></pre></td></tr></table></figure></li><li><p>修改配置<br>在运行 verdaccio 命令时的输出信息里, 找到 config.yaml文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 本地仓库没有指定包时的上游仓库</span><br><span class="line">uplinks:</span><br><span class="line">  npmjs:</span><br><span class="line">    url: https://registry.npm.taobao.org/  </span><br><span class="line">// 文末添加监听端口</span><br><span class="line">listen: 0.0.0.0:4873</span><br></pre></td></tr></table></figure></li><li><p>设置仓库地址</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="built_in">set</span> registry http://localhost:<span class="number">4873</span>/</span><br></pre></td></tr></table></figure></li><li><p>添加账户</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm adduser admin --registry http://localhost:<span class="number">4873</span></span><br></pre></td></tr></table></figure></li><li><p>发布私有包</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm publish --registry http://localhost:<span class="number">4873</span></span><br></pre></td></tr></table></figure></li></ol><h3 id="守护进程"><a href="#守护进程" class="headerlink" title="守护进程"></a>守护进程</h3><ol><li>试过一些教程中说的pm2, 可惜在windows系统中不太好用, 只好退而求次使用 开机启动 + vbs脚本打开一个隐藏的命令行 这种方法. 代码如下, 将其放入Startup文件夹即可.<br><strong>注意: 文件的名字不要是verdaccio.vbs, 会覆盖verdaccio命令</strong></li></ol><figure class="highlight vbs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// verda.vbs</span><br><span class="line"><span class="keyword">Set</span> ws = <span class="built_in">CreateObject</span>(<span class="string">"Wscript.Shell"</span>) </span><br><span class="line">ws.run <span class="string">"cmd /c verdaccio"</span>,vbhide</span><br></pre></td></tr></table></figure><p>嗯 .. 对于不会vbs的我来说, 这个进程很安全很安全.<br>话说, 这个进程除了删文件关电脑外, 还有什么办法可以很方便地关掉~</p>]]></content>
     
@@ -31,6 +55,8 @@
     
     </summary>
     
+    
+      <category term="npm" scheme="http://kscript.gitee.io/tags/npm/"/>
     
   </entry>
   
@@ -50,9 +76,9 @@
     </summary>
     
     
-      <category term="js" scheme="http://kscript.gitee.io/tags/js/"/>
-    
       <category term="前端" scheme="http://kscript.gitee.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="js" scheme="http://kscript.gitee.io/tags/js/"/>
     
   </entry>
   
