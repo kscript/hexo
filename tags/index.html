@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+  标签云
+  </title>
+  
+  <script src='http://gallerybox.echartsjs.com/dep/echarts/3.8.0/echarts.min.js'></script>
+  <script src='http://data-visual.cn/datav/src/js/echarts/extension/echarts-wordcloud.min.js'></script>
+</head>
+<body>
+<div class="word-cloud2">
+  <div id="main" style="width: 1200px;height: 600px;margin: 0 auto;"></div>
+</div>
+<script>
+  var tagData = [
+  {
+    "name": "git",
+    "value": 2,
+    "articles": []
+  },
+  {
+    "name": "sshkey",
+    "value": 1,
+    "articles": []
+  },
+  {
+    "name": "版本控制",
+    "value": 1,
+    "articles": []
+  },
+  {
+    "name": "hexo",
+    "value": 1,
+    "articles": []
+  },
+  {
+    "name": "博客",
+    "value": 1,
+    "articles": []
+  },
+  {
+    "name": "npm",
+    "value": 1,
+    "articles": []
+  },
+  {
+    "name": "前端",
+    "value": 2,
+    "articles": []
+  },
+  {
+    "name": "js",
+    "value": 2,
+    "articles": []
+  },
+  {
+    "name": "导航",
+    "value": 1,
+    "articles": []
+  }
+];
+</script>
+<script>
+  var myChart = echarts.init(document.getElementById('main'));
+  maskImage('logo.png');
+  myChart.on('click', function (params) {
+    window.open('https://kscript.gitee.io/hexo/tags/' + encodeURIComponent(params.name));
+  });
+  function maskImage(src){
+    if(src){
+      var image = new Image();
+      image.onload = function(){
+        setOption(image);
+      }
+      image.src = src;
+    } else {
+      setOption();
+    }
+  }
+  function setOption(image){
+    myChart.setOption({
+      series: [{
+        type: 'wordCloud',
+        gridSize: 1,
+        sizeRange: [13, 40],//最小文字——最大文字
+        rotationRange: [0, 90],//旋转角度区间
+        rotationStep: 90,//旋转角度间隔
+        maskImage: image || '',//遮罩图片
+        width: 1200,
+        height: 600,
+        left: 'center',
+        top: 'center',
+        gridSize: 10,//字符间距
+        textStyle: {
+          normal: {
+            fontFamily: 'sans-serif',
+            fontWeight: 'bold',
+            color: function () {
+              return 'rgb(' + createColor(160, 10).join(',') + ')';
+            }
+          },
+          emphasis: {
+            color: function () {
+              return 'rgb(' + createColor(200, 10).join(',') + ')';
+            }
+          }
+        },
+        data: formatData(tagData)
+      }]
+    });
+    function formatData(data){
+      return data.map(function(item){
+        item.textStyle = {
+          normal: {},
+          emphasis: {}
+        }
+        return item;
+      });
+    }
+    function createColor(num, min){
+      min = min || 100;
+      num = num || 100;
+      return [
+        ~~(Math.random() * num + min),
+        ~~(Math.random() * num + min),
+        ~~(Math.random() * num + min)
+      ];
+    }
+  }
+</script>
+</body>
+</html>
