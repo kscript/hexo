@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[前端学习笔记之JavaScript数组]]></title>
+    <url>%2Fhexo%2F20181228%2F%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8BJavaScript%E6%95%B0%E7%BB%84.html</url>
+    <content type="text"><![CDATA[我们在写代码的时候，经常会对数组进行操作。比如说我自己吧，写2D小游戏时，会将一个二维数组作为游戏地图来用。那么在js中有哪些技巧呢，下面就列举一些经常会用到的。1、length（操作原数组） 众所周知，数组有着一个默认的长度属性。我们可以通过设置长度值的方式删除超过它的数组成员，这在一些特定环境里还是比较有用的。 2、pop、shift、splice（操作原数组） pop、shift分别用于删除数组的第一个和最后一个成员。需要注意的是，它们返回的是被删掉的成员，有时候我们一不注意将其赋给原有的数组或者是其它变量之类的，经常感觉到莫明其妙。因为在我们的逻辑中，它们返回的是修改后的数组(如replace)，其实不然。这是考虑到我们虽然删除了该成员，但是还需要通过它的值来do something，仔细想想这样才是更合理的。 除了以上两种删除数组的办法外，js中还提供了一个比较自由的方法，那就是splice。 为什么要这样说呢，因为splice不仅可以删除任意位置任意长度的元素，还可以插入新元素!如果没有这个方法，那么插入会是很让人头疼的一件事，想像一下过程吧。 3、join ? split（字符串方法）（操作原数组） 这也是编程中常见的对立的方法，前者用于把数组转为字符串，后者则是把字符串拆分为数组。两者可以说是最常用的数组方法，我们可以用来做很多事情，比如说拼字符串，截取字符串等等。 4、sort（操作原数组） js中提供的数组的排序方法，虽然我们需要了解各种的数组排序算法，但开发过程中sort基本上就可以满足需求。sort常见的两种形式，Array.sort()以及Array.sort(function(a,b){return a&gt;b;}),后一种用于应对较为复杂的排序，如字符串和数值的比较。。 6、push，unshift，reverse（操作原数组） 类似于pop、shift，自行举一反三! reverse用于颠倒数组元素的顺序。 7、concat，slice（创建新数组） concat连接两个数组，slice读取数组的一部分，这两个比较常见的用法是与call，apply的结合使用。数组降维：[].concat.apply([],ary) 类数组转数组 [].slice.call(arguments); 另外，我们可以使用ary.concat([])或者ary.slice(0)来创建新的数组。]]></content>
+      <tags>
+        <tag>js</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[前端资源导航]]></title>
     <url>%2Fhexo%2F20181227%2F%E5%89%8D%E7%AB%AF%E8%B5%84%E6%BA%90%E5%AF%BC%E8%88%AA.html</url>
     <content type="text"><![CDATA[整理了一些前端相关的资源, 包括前端框架、打包工具、技术手册、技术博客、问答社区、在线调试等 VueVue: en | zhVue CLI 3Vue技术内幕Element-ui ReactReact: en | zhreact-native: en | zhdiscussreact中文 包管理器npmcnpmyarn 打包工具Webpack: en | zhGlup: en | zhRequireJS: en | zh 问答社区stackoverflow思否知乎 版本控制githubgitlab码云 技术社区/博客掘金CSDN简书博客园开源中国前端乱炖WEB前端开发V2EXdiv.ioITPUB 张鑫旭阮一峰W3CPlus 技术手册W3C: en | zhMDN: en | zhNodeJS: en | zhw3schools: en | zhTypeScript: en | zhRedux: en | zh菜鸟教程腾讯云 - 开发者手册前端开发者手册 在线代码测试JsbinCodepenJsfiddleCodesandbox 注释工具jsdoc: en | zh 其它Hexo博客生成阿里字体图标百度字体编辑器]]></content>
       <tags>
-        <tag>前端</tag>
         <tag>js</tag>
+        <tag>前端</tag>
         <tag>导航</tag>
       </tags>
   </entry>
@@ -23,8 +32,8 @@
     <url>%2Fhexo%2F20181226%2F%E6%A8%A1%E6%8B%9Fnew%E4%B8%80%E4%B8%AA%E5%AE%9E%E4%BE%8B.html</url>
     <content type="text"><![CDATA[实现方法1234567891011function newInstace (func) &#123; if (func instanceof Function) &#123; // 基于函数原型创建一个对象 var instace = Object.create(func.prototype); // 修改函数的指向并调用 var result = func.apply(instace, [].slice.call(arguments, 1)); // 如果返回值是对象, 则返回这个对象, 否则返回前面创建的实例 return result instanceof Object ? result : instace; &#125; throw '第一个参数不是函数~';&#125; 调用方法1234567891011function Person(name)&#123; this.name = name;&#125;function Cat(name)&#123; this.name = name; return &#123; name: 'c' &#125;&#125;console.log(newInstace(Person, 'a')); // Person&#123; name: "a" &#125;console.log(newInstace(Cat, 'b')); // &#123; name: "c" &#125;]]></content>
       <tags>
-        <tag>前端</tag>
         <tag>js</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
