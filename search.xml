@@ -4,6 +4,9 @@
     <title><![CDATA[前端学习笔记之JavaScript数组]]></title>
     <url>%2Fhexo%2F20181228%2F%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8BJavaScript%E6%95%B0%E7%BB%84.html</url>
     <content type="text"><![CDATA[我们在写代码的时候，经常会对数组进行操作。比如说我自己吧，写2D小游戏时，会将一个二维数组作为游戏地图来用。那么在js中有哪些技巧呢，下面就列举一些经常会用到的。1、length（操作原数组） 众所周知，数组有着一个默认的长度属性。我们可以通过设置长度值的方式删除超过它的数组成员，这在一些特定环境里还是比较有用的。 2、pop、shift、splice（操作原数组） pop、shift分别用于删除数组的第一个和最后一个成员。需要注意的是，它们返回的是被删掉的成员，有时候我们一不注意将其赋给原有的数组或者是其它变量之类的，经常感觉到莫明其妙。因为在我们的逻辑中，它们返回的是修改后的数组(如replace)，其实不然。这是考虑到我们虽然删除了该成员，但是还需要通过它的值来do something，仔细想想这样才是更合理的。 除了以上两种删除数组的办法外，js中还提供了一个比较自由的方法，那就是splice。 为什么要这样说呢，因为splice不仅可以删除任意位置任意长度的元素，还可以插入新元素!如果没有这个方法，那么插入会是很让人头疼的一件事，想像一下过程吧。 3、join ? split（字符串方法）（操作原数组） 这也是编程中常见的对立的方法，前者用于把数组转为字符串，后者则是把字符串拆分为数组。两者可以说是最常用的数组方法，我们可以用来做很多事情，比如说拼字符串，截取字符串等等。 4、sort（操作原数组） js中提供的数组的排序方法，虽然我们需要了解各种的数组排序算法，但开发过程中sort基本上就可以满足需求。sort常见的两种形式，Array.sort()以及Array.sort(function(a,b){return a&gt;b;}),后一种用于应对较为复杂的排序，如字符串和数值的比较。。 6、push，unshift，reverse（操作原数组） 类似于pop、shift，自行举一反三! reverse用于颠倒数组元素的顺序。 7、concat，slice（创建新数组） concat连接两个数组，slice读取数组的一部分，这两个比较常见的用法是与call，apply的结合使用。数组降维：[].concat.apply([],ary) 类数组转数组 [].slice.call(arguments); 另外，我们可以使用ary.concat([])或者ary.slice(0)来创建新的数组。]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
       <tags>
         <tag>js</tag>
         <tag>数组</tag>
@@ -13,6 +16,9 @@
     <title><![CDATA[前端资源导航]]></title>
     <url>%2Fhexo%2F20181227%2F%E5%89%8D%E7%AB%AF%E8%B5%84%E6%BA%90%E5%AF%BC%E8%88%AA.html</url>
     <content type="text"><![CDATA[整理了一些前端相关的资源, 包括前端框架、打包工具、技术手册、技术博客、问答社区、在线调试等 VueVue: en | zhVue CLI 3Vue技术内幕Element-ui ReactReact: en | zhreact-native: en | zhdiscussreact中文 包管理器npmcnpmyarn 打包工具Webpack: en | zhGlup: en | zhRequireJS: en | zh 问答社区stackoverflow思否知乎 版本控制githubgitlab码云 技术社区/博客掘金CSDN简书博客园开源中国前端乱炖WEB前端开发V2EXdiv.ioITPUB 张鑫旭阮一峰W3CPlus 技术手册W3C: en | zhMDN: en | zhNodeJS: en | zhw3schools: en | zhTypeScript: en | zhRedux: en | zh菜鸟教程腾讯云 - 开发者手册前端开发者手册 在线代码测试JsbinCodepenJsfiddleCodesandbox 注释工具jsdoc: en | zh 其它Hexo博客生成阿里字体图标百度字体编辑器]]></content>
+      <categories>
+        <category>all</category>
+      </categories>
       <tags>
         <tag>js</tag>
         <tag>前端</tag>
@@ -23,6 +29,9 @@
     <title><![CDATA[使用verdaccio搭建本地npm仓库]]></title>
     <url>%2Fhexo%2F20181226%2F%E4%BD%BF%E7%94%A8verdaccio%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0npm%E4%BB%93%E5%BA%93.html</url>
     <content type="text"><![CDATA[前言在前端日益工程化的今天, 我们几乎每天都在和node, npm, webpack这些工具打交道.它们极大地提升了我们的开发效率, 却也带来了不少的问题.比如webpack的难配置, npm包的依赖地狱, 动不动就需要安装一堆依赖等…今天记录一下 使用verdaccio搭建本地npm仓库 的办法, 解决npm依赖过重的问题.关于webpack的配置, 如果有闲暇时间的话, 我准备再写一篇[从零配置一个webpack项目]的文章. 使用本地仓库的优势 减少重复安装 可以发布一些私有包 环境搭建 全局安装 verdaccio1npm install --global verdaccio 使用说明 运行 verdaccio 1verdaccio 修改配置在运行 verdaccio 命令时的输出信息里, 找到 config.yaml文件 123456// 本地仓库没有指定包时的上游仓库uplinks: npmjs: url: https://registry.npm.taobao.org/ // 文末添加监听端口listen: 0.0.0.0:4873 设置仓库地址 1npm set registry http://localhost:4873/ 添加账户 1npm adduser admin --registry http://localhost:4873 发布私有包 1npm publish --registry http://localhost:4873 守护进程 试过一些教程中说的pm2, 可惜在windows系统中不太好用, 只好退而求次使用 开机启动 + vbs脚本打开一个隐藏的命令行 这种方法. 代码如下, 将其放入Startup文件夹即可.注意: 文件的名字不要是verdaccio.vbs, 会覆盖verdaccio命令 123// verda.vbsSet ws = CreateObject("Wscript.Shell") ws.run "cmd /c verdaccio",vbhide 嗯 .. 对于不会vbs的我来说, 这个进程很安全很安全.话说, 这个进程除了删文件关电脑外, 还有什么办法可以很方便地关掉~]]></content>
+      <categories>
+        <category>npm</category>
+      </categories>
       <tags>
         <tag>npm</tag>
       </tags>
@@ -31,6 +40,9 @@
     <title><![CDATA[模拟new一个实例]]></title>
     <url>%2Fhexo%2F20181226%2F%E6%A8%A1%E6%8B%9Fnew%E4%B8%80%E4%B8%AA%E5%AE%9E%E4%BE%8B.html</url>
     <content type="text"><![CDATA[实现方法1234567891011function newInstace (func) &#123; if (func instanceof Function) &#123; // 基于函数原型创建一个对象 var instace = Object.create(func.prototype); // 修改函数的指向并调用 var result = func.apply(instace, [].slice.call(arguments, 1)); // 如果返回值是对象, 则返回这个对象, 否则返回前面创建的实例 return result instanceof Object ? result : instace; &#125; throw '第一个参数不是函数~';&#125; 调用方法1234567891011function Person(name)&#123; this.name = name;&#125;function Cat(name)&#123; this.name = name; return &#123; name: 'c' &#125;&#125;console.log(newInstace(Person, 'a')); // Person&#123; name: "a" &#125;console.log(newInstace(Cat, 'b')); // &#123; name: "c" &#125;]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
       <tags>
         <tag>js</tag>
         <tag>前端</tag>
@@ -40,6 +52,9 @@
     <title><![CDATA[合并远程提交记录]]></title>
     <url>%2Fhexo%2F20181222%2F%E5%90%88%E5%B9%B6%E8%BF%9C%E7%A8%8B%E6%8F%90%E4%BA%A4%E8%AE%B0%E5%BD%95.html</url>
     <content type="text"><![CDATA[1. 选择要操作的记录12345678910// 选择要合并记录的分支git checkout dev// 查看提交记录git log// 选取要操作的记录// -i 后面为一个区间, 它可以是:// 1. 提交记录的hash, 表示选择该记录(不含), 到 最新提交 这个区间// 2. N ~ N1 区间git rebase -i [startpoint] [endpoint] 2. 选择完, 进入vim模式首先, 使用 insert 键切换到编辑模式 12345678910// 编辑前显示的文本pick [hash1] [commit]pick [hash2] [commit]pick [hash3] [commit]// pick 合并后保留的 commitpick [hash1] [commit]// 改为s, 意为合并到 pick 里s [hash2] [commit]s [hash3] [commit] 编辑完毕, 按ESC键, 进入命令模式| 命令 | 说明 |–|–| :w | 写入| :q | 退出, 如果内容有修改, 会提示错误| :q! | 不保存, 强制退出| :wq | 写入并退出| :wq! | 强制写入并退出| :e! | 放弃所有修改，从上次保存文件开始再编辑上面列举了用到的部分命令, 更多命令自己搜… 3. 合并退出vim模式后, git 会对选择的提交记录进行合并, 如果合并时有冲突, 需要修改, 修改以后使用命令12git add .git rebase --continue 你也可以放弃合并12// 放弃合并git rebase --abort 4. 提交12// 强制提交到dev分支git push -f origin dev]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
       <tags>
         <tag>git</tag>
       </tags>
@@ -48,11 +63,17 @@
     <title><![CDATA[合并分支]]></title>
     <url>%2Fhexo%2F20181222%2F%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF.html</url>
     <content type="text"><![CDATA[123456789101112// 在dev分支内进行开发git checkout devgit add .git commit -m &apos;N次提交代码到dev&apos;git push -u origin dev// 在dev分支完成某些任务后切换到master分支git checkout mastergit merge --squash devgit commit -m &apos;描述下合并过来的这些代码都做了什么&apos;git push -u origin master]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
   </entry>
   <entry>
     <title><![CDATA[hexo踩坑记录]]></title>
     <url>%2Fhexo%2F20181221%2Fhexo%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html</url>
     <content type="text"><![CDATA[开发文档Hexo中文文档 环境搭建 全局安装Hexo-cli 1npm install -g hexo-cli 使用 Hexo-cli 创建Hexo项目 123hexo init &lt;folder&gt;cd &lt;folder&gt;npm install 配置站点项目根目录下找到 _config.yml 文件, 按照文档给的说明修改 写作 新增文章1hexo new [layout] &lt;title&gt; 如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。新增的文章, 可以在 source_posts\ 文件夹里找到。打开文章md, 文件最上边的两个 --- 放置的是文章的一些信息, 写正文的话另起一行即可 生成1hexo generate 预览开启本地服务1hexo server 发布 使用 git 部署的话, 首先要安装 hexo-deployer-git 1npm install hexo-deployer-git --save 安装完毕, 修改配置 12345deploy: type: git repo: &lt;repository url&gt; branch: [branch] message: [message] 如果习惯于git的话, message可以不用写, 每次提交部署的时候写上 提交部署12// 这里的写法与 git commit 一致, 也可以到_config.yml中去配hexo deploy -m message 个性配置Hexo默认的主题, 会在首页显示文章的全文, 这个问题可以使用 站点首页不显示文章全文 这篇博文提到的办法解决]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
         <tag>博客</tag>
@@ -62,6 +83,9 @@
     <title><![CDATA[git生成SSHkey]]></title>
     <url>%2Fhexo%2F20181221%2Fgit%E7%94%9F%E6%88%90SSHkey.html</url>
     <content type="text"><![CDATA[1. 配置全局 name 和 email12git config --global user.name &quot;your_account&quot;git config –-global user.email your_email@example.com 2. 生成 SSH Key将以下命令中的邮箱改为自己的邮箱后, 执行命令, 然后连续按回车键三次1ssh-keygen -t rsa -C your_email@example.com 3. 查看生成的 SSH Key1cat ~/.ssh/id_rsa.pub 4. 添加 SSH Key 到 github 配置使用第3步的命令, 或者打开 C:\Users\Administrator\.ssh\id_rsa.pub 文件来获取 SSH Key,然后打开 添加 SSH Key 页面, 自定义一个 title, 并将 SSH Key 粘贴到 Key 输入框, 最后点击 Add 5. 测试 SSH Key1ssh git@github.com]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
       <tags>
         <tag>git</tag>
         <tag>sshkey</tag>
