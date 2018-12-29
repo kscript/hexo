@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[thinkPHP5搭建api服务器]]></title>
     <url>%2Fhexo%2F20181229%2FthinkPHP5%E6%90%AD%E5%BB%BAapi%E6%9C%8D%E5%8A%A1%E5%99%A8.html</url>
-    <content type="text"><![CDATA[距离上一次搭博客已经过去很长时间了.虽然目前的博客运行还算正常, 但由于早期写的时候, 技术水平不足, 前后分离也做的不够好, 日常维护起来还是挺麻烦的.所以, 这次打算重写api. 并且, 这一次后端主要作为api服务器, 博客功能将使用 hexo 准备工作 下载在官网 下载最新版本的 thinkPHP(5.0.23) 配置Nginx关于TP5如何配置Nginx, 可以参考博文: tp5中nginx配置]]></content>
+    <content type="text"><![CDATA[距离上一次搭博客已经过去很长时间了.虽然目前的博客运行还算正常, 但由于早期写的时候, 技术水平不足, 前后分离也做的不够好, 日常维护起来还是挺麻烦的.所以, 这次打算重写api. 并且, 这一次后端主要作为api服务器, 博客功能将使用 hexo 准备工作参考资料ThinkPHP5.1完全开发手册 下载使用 配置Nginx关于TP5如何配置Nginx, 可以参考博文: tp5中nginx配置]]></content>
       <categories>
         <category>php</category>
       </categories>

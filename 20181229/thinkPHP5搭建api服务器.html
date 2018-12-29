@@ -93,8 +93,9 @@
     </div>
   </div>    <div class="post-content">
       <div class="content">          <p>距离上一次搭博客已经过去很长时间了.<br>虽然目前的博客运行还算正常, 但由于早期写的时候, 技术水平不足, 前后分离也做的不够好, 日常维护起来还是挺麻烦的.<br>所以, 这次打算重写api. 并且, 这一次后端主要作为api服务器, 博客功能将使用 hexo<br><a id="more"></a></p>
-<h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ol>
-<li>下载<br>在<a href="http://www.thinkphp.cn" target="_blank" rel="noopener">官网</a> 下载最新版本的 <a href="http://www.thinkphp.cn/donate/download/id/1279.html" target="_blank" rel="noopener">thinkPHP(5.0.23)</a></li>
+<h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><p>参考资料<br><a href="https://www.kancloud.cn/manual/thinkphp5_1" target="_blank" rel="noopener">ThinkPHP5.1完全开发手册</a></p>
+<ol>
+<li>下载<br>使用</li>
 <li>配置Nginx<br>关于TP5如何配置Nginx, 可以参考博文: <a href="https://www.cnblogs.com/mracale/p/9115872.html#" target="_blank" rel="noopener">tp5中nginx配置</a>  </li>
 </ol>      </div>  <div class="post-copyright">
     <p class="copyright-item">
@@ -145,7 +146,8 @@
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
 <script src="//cdn.jsdelivr.net/gh/xcss/valine@v1.1.7/dist/Valine.min.js"></script>
 <script type="text/javascript">
-    new Valine({
+    var vcomments = document.getElelementById("vcomments");
+    vcomments && new Valine({
         el: '#vcomments',
         notify: false,
         verify: false,
